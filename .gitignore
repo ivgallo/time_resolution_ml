@@ -1,0 +1,47 @@
+# Exclude PyCharm project files
+.idea/
+*.iml
+*.iws
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python-related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+*.pyd
+*.whl
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+
+# Docker-related files
+*.log
+docker-compose.override.yml
+
+# Build artifacts
+build/
+dist/
+
+# Cache
+*.cache
+
+# Exclude database and data
+*.sqlite3
+data/
+
+# Exclude personal and temporary configurations
+*.swp
+*.swo
