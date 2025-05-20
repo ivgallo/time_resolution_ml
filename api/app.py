@@ -11,16 +11,24 @@ with open("../models/transformers/label_encoders.pkl", "rb") as f:
 
 model = joblib.load("../models/model.pkl")
 
+def encode_feature(encoder, value):
+    if value in encoder.classes_:
+        return encoder.transform([value])[0]
+    else:
+        return -1
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json()
 
     try:
+        cat_cols = ['priority', 'category', 'issueType', 'severity']
         encoded = {
-            col: encoders[col].transform([data[col]])[0]
-            if data[col] in encoders[col].classes_ else -1
-            for col in ['priority', 'category', 'issueType', 'severity']
+            col: encode_feature(encoders[col], data[col])
+            for col in cat_cols
         }
+
     except Exception as e:
         return jsonify({"error": f"Encoding failed: {str(e)}"}), 400
 
