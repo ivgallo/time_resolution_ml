@@ -40,7 +40,6 @@ dist/
 
 # Exclude database and data
 *.sqlite3
-data/
 
 # Exclude personal and temporary configurations
 *.swp
