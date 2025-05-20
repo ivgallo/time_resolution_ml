@@ -9,14 +9,14 @@ Le développement du modèle suit les étapes suivantes:
 
 ```mermaid
 flowchart LR
-    A["1. Analyse des données\n(data_analyse.ipynb)"] --> B["2. Prétraitement\n(processing.ipynb)"]
-    B --> C["3. Entraînement\n(training.ipynb)"]
-    C --> D["4. Déploiement API\n(app.py)"]
+    A["1. Analyse des données<br/>(data_analyse.ipynb)"] --> B["2. Prétraitement<br/>(processing.ipynb)"]
+    B --> C["3. Entraînement<br/>(training.ipynb)"]
+    C --> D["4. Déploiement API<br/>(app.py)"]
 
-    A --> A1["- Exploration initiale\n- Analyse statistique\n- Visualisations\n- Corrélations"]
-    B --> B1["- Nettoyage données\n- Gestion valeurs\n  manquantes/aberrantes\n- Encodage variables"]
-    C --> C1["- Sélection features\n- Split train/test\n- Entraînement modèles\n- Évaluation (RMSE, R²)"]
-    D --> D1["- Chargement modèle\n- Exposition API REST\n- Prédiction temps\n  de résolution"]
+    A --> A1["Exploration initiale<br/>Analyse statistique<br/>Visualisations<br/>Corrélations"]
+    B --> B1["Nettoyage données<br/>Gestion valeurs manquantes/aberrantes<br/>Encodage variables"]
+    C --> C1["Sélection features<br/>Split train/test<br/>Entraînement modèles<br/>Évaluation (RMSE, R²)"]
+    D --> D1["Chargement modèle<br/>Exposition API REST<br/>Prédiction temps de résolution"]
 ```
 
 ## Comment tester le projet
