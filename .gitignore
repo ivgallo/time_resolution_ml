@@ -44,3 +44,6 @@ dist/
 # Exclude personal and temporary configurations
 *.swp
 *.swo
+
+# Exclude output files
+output/
