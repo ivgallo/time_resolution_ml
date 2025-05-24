@@ -17,6 +17,13 @@ L’objectif principal est de concevoir un **modèle de régression supervisée*
 
 Le projet a été structuré en plusieurs phases, chacune documentée dans un notebook ou automatisée via script :
 
+```mermaid
+flowchart LR
+    A["1. Analyse des données<br/>(data_analyse.ipynb)"] --> B["2. Prétraitement<br/>(processing.ipynb)"]
+    B --> C["3. Entraînement<br/>(training.ipynb)"]
+    C --> D["4. Déploiement API<br/>(app.py)"]
+```
+
 | Étape                                                    | Description                                                                 |
 |----------------------------------------------------------|-----------------------------------------------------------------------------|
 | [`data_analyse.ipynb` ](../notebooks/data_analyse.ipynb) | Analyse exploratoire : compréhension des variables, distribution, corrélations |
@@ -51,5 +58,3 @@ Ce projet m'a permis de couvrir l’ensemble du cycle de vie d’un projet de ma
 - De la **compréhension des données** jusqu’au **déploiement d’un modèle**.
 - Le modèle final atteint des performances satisfaisantes (R² > 0.70 sur les données test).
 - Il est désormais **intégrable dans une application ou API** et prêt à évoluer.
-
-> 🚀 Une base solide pour déployer des modèles prédictifs dans des contextes opérationnels réels.

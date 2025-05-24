@@ -5,7 +5,7 @@ import joblib
 
 app = Flask(__name__)
 
-# Cargar encoder y modelo
+# Load encoder and model
 with open("../models/transformers/label_encoders.pkl", "rb") as f:
     encoders = pickle.load(f)
 
